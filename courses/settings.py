@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'rest_framework',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -74,9 +76,15 @@ WSGI_APPLICATION = "courses.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'courses_app',
+        'USER': 'bektur',
+        'PASSWORD': '9569',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
